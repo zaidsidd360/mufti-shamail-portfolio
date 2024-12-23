@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import ScrollToTop from "./components/ScrollToTop";
-import Home2 from "./pages/Home2";
+// import Home2 from "./pages/Home2";
 import Navbar from "./components/Navbar";
 
 const AppContent = () => {
