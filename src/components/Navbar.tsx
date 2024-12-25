@@ -7,10 +7,10 @@ const Navbar = () => {
 	const location = useLocation();
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [hasScrolled, setHasScrolled] = useState(false);
-	const { scrollY } = useScroll();
+	const { scrollY, scrollYProgress } = useScroll();
 
 	useEffect(() => {
-		return scrollY.onChange((latest) => {
+		return scrollY.on("change", (latest) => {
 			const scrollPercentage =
 				latest /
 				(document.documentElement.scrollHeight - window.innerHeight);
@@ -51,10 +51,11 @@ const Navbar = () => {
 	return (
 		<motion.nav
 			className="fixed top-0 left-0 w-full z-[9999]"
+			initial={{ backgroundColor: "rgba(21, 22, 21, 0)" }}
 			animate={{
 				backgroundColor: hasScrolled
-					? "rgb(21, 22, 21)"
-					: "transparent",
+					? "rgba(21, 22, 21, 0.65)"
+					: "rgba(21, 22, 21, 0)",
 				backdropFilter: hasScrolled ? "blur(10px)" : "none",
 				boxShadow: hasScrolled
 					? "0 1px 3px 0 rgba(0, 0, 0, 0.1)"
@@ -108,10 +109,10 @@ const Navbar = () => {
 					hasScrolled
 						? isActiveRoute(item.href)
 							? "text-white border-white"
-							: "text-gray-600 border-transparent hover:text-gray-400 hover:border-gray-400"
+							: "text-gray-300 border-transparent hover:text-gray-400 hover:border-gray-400"
 						: isActiveRoute(item.href)
 						? "text-white border-white"
-						: "text-gray-600 border-transparent hover:text-white hover:border-white/70"
+						: "text-gray-300 border-transparent hover:text-white hover:border-white/70"
 				}
               `}
 						>
@@ -181,6 +182,19 @@ const Navbar = () => {
 					</div>
 				</motion.div>
 			</div>
+			<motion.div
+				id="scroll-indicator"
+				style={{
+					scaleX: scrollYProgress,
+					position: "fixed",
+					bottom: 0,
+					left: 0,
+					right: 0,
+					height: 1,
+					originX: 0,
+					backgroundColor: "#c3e5a5",
+				}}
+			/>
 		</motion.nav>
 	);
 };

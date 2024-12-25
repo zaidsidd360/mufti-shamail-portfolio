@@ -19,10 +19,10 @@ const About: React.FC = () => {
 				<div className="order-2 lg:order-1 relative">
 					<div className="relative aspect-square w-full max-w-[650px] mx-auto">
 						{/* Glow Effect */}
-						<img
+						{/* <img
 							src={MuftiPortrait}
 							className="absolute inset-0 rounded-2xl h-full blur-2xl scale-95 md:scale-95 -z-21"
-						/>
+						/> */}
 
 						{/* Decorative Elements */}
 						{/* <div className="absolute inset-0 bg-[#191b14] rounded-2xl transform rotate-3 -z-20" />

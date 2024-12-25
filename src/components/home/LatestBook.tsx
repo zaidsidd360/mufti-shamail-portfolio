@@ -2,6 +2,25 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
+// const testimonials = [
+// 	{
+// 		name: "Scholar 1",
+// 		text: "This book is a must-read for anyone seeking knowledge.",
+// 	},
+// 	{
+// 		name: "Scholar 2",
+// 		text: "An enlightening and profound work.",
+// 	},
+// 	{
+// 		name: "Scholar 3",
+// 		text: "A masterpiece that offers deep insights.",
+// 	},
+// 	{
+// 		name: "Scholar 4",
+// 		text: "Highly recommended for students and scholars alike.",
+// 	},
+// ];
+
 interface LatestBookProps {
 	bookCover: string;
 	title: string;
@@ -16,7 +35,7 @@ const LatestBook: React.FC<LatestBookProps> = ({
 	return (
 		<section className="relative py-24 h-full grid place-items-center bg-gray-900">
 			<h1 className="text-4xl md:text-7xl font-bold text-[#c3e5a5] md:text-center md:mb-16 w-full px-6 mb-8 z-20">
-				Upcoming Books
+				Latest Book
 			</h1>
 			{/* Background Gradient */}
 			<div className="absolute inset-0 bg-gradient-to-b from-[#1a1f17] to-[#191a13]" />
@@ -86,44 +105,41 @@ const LatestBook: React.FC<LatestBookProps> = ({
 						whileHover={{ scale: 1.02 }}
 						whileTap={{ scale: 0.98 }}
 					>
-						Pre-order Now
+						Buy Now
 						<ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
 					</motion.button>
 				</div>
 			</motion.div>
 
 			{/* Testimonials Section */}
-			{/* <section className="relative mt-20 py-10 border border-white/50 rounded-xl bg-[#191b14]">
-				<div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-12">
-					<h3 className="text-3xl md:text-4xl font-bold text-white text-center">
-						Endorsed by Scholars
-					</h3>
-
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-						{[1, 2, 3].map((testimonial, index) => (
-							<motion.div
-								key={index}
-								className="p-6 bg-gray-700 rounded-xl shadow-lg space-y-4"
-								whileHover={{ scale: 1.02 }}
-								transition={{ duration: 0.3 }}
-							>
-								<img
-									src={`https://via.placeholder.com/150`}
-									alt={`Scholar ${index + 1}`}
-									className="w-16 h-16 rounded-full mx-auto border-2 border-gray-500"
-								/>
-								<h4 className="text-lg font-medium text-white text-center">
-									Scholar {index + 1}
-								</h4>
-								<p className="text-gray-300 text-center text-sm">
-									"This book is a groundbreaking work that
-									every individual must read."
-								</p>
-							</motion.div>
-						))}
-					</div>
-				</div>
-			</section> */}
+			{/* <div className="relative z-10 max-w-7xl mx-auto px-6 mt-16">
+				<h2 className="text-3xl md:text-5xl font-bold text-[#c3e5a5] text-center mb-12">
+					Recommended by Scholars
+				</h2>
+				<motion.div
+					className="flex overflow-x-scroll snap-x snap-mandatory space-x-4"
+					drag="x"
+					dragConstraints={{ left: -300, right: 0 }}
+				>
+					{testimonials.map((testimonial, index) => (
+						<motion.div
+							key={index}
+							className="min-w-[300px] md:min-w-[400px] lg:min-w-[500px] bg-[#191b14] p-6 rounded-lg shadow-lg snap-center"
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ duration: 0.8, delay: 0.1 * index }}
+						>
+							<p className="text-lg text-gray-400 mb-4">
+								{testimonial.text}
+							</p>
+							<p className="text-xl font-semibold text-[#c3e5a5]">
+								- {testimonial.name}
+							</p>
+						</motion.div>
+					))}
+				</motion.div>
+			</div> */}
 		</section>
 	);
 };
