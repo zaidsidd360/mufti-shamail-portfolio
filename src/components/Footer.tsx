@@ -6,7 +6,7 @@ const Footer = () => {
 	return (
 		<footer className="bg-[#121510] text-white relative">
 			{/* Background Gradient */}
-			<div className="absolute inset-0 bg-gradient-to-b from-[#191b14] to-[#121510]" />
+			<div className="absolute inset-0 bg-gradient-to-b from-[#24271b] to-[#121510]" />
 
 			<div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
 				{/* Main Footer Grid */}

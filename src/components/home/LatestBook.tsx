@@ -33,10 +33,16 @@ const LatestBook: React.FC<LatestBookProps> = ({
 	description,
 }) => {
 	return (
-		<section className="relative py-24 h-full grid place-items-center bg-gray-900">
-			<h1 className="text-4xl md:text-7xl font-bold text-[#c3e5a5] md:text-center md:mb-16 w-full px-6 mb-8 z-20">
+		<section className="relative py-16 md:py-24 h-full grid place-items-center bg-gray-900">
+			<motion.h1
+				className="text-4xl md:text-7xl font-bold text-[#c3e5a5] md:text-center md:mb-16 w-full px-6 mb-8 z-20"
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.8 }}
+			>
 				Latest Book
-			</h1>
+			</motion.h1>
 			{/* Background Gradient */}
 			<div className="absolute inset-0 bg-gradient-to-b from-[#1a1f17] to-[#191a13]" />
 

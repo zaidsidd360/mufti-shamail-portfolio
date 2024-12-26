@@ -4,7 +4,7 @@ import MuftiPortrait from "../../assets/muftiportrait.jpg";
 
 const About: React.FC = () => {
 	return (
-		<section className="bg-[#121510] text-white py-16 grid place-items-center relative overflow-hidden">
+		<section className="bg-[#121510] text-white py-12 md:py-20 grid place-items-center relative overflow-hidden">
 			<h1 className="text-4xl md:text-7xl font-bold text-[#c3e5a5] md:text-center md:mb-16 w-full px-5 mb-8">
 				About Mufti Shamail
 			</h1>

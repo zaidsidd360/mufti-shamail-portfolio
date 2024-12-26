@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import InstagramEmbed from "../InstagramEmbed";
+import { InstagramEmbed } from "react-social-media-embed";
 
 const LatestUpdates = () => {
 	return (
-		<section className="relative py-24 bg-[#121510]">
+		<section className="relative py-16 md:py-24 bg-[#121510]">
 			{/* Background Gradient */}
 			<div className="absolute inset-0 bg-gradient-to-b from-[#191b14] to-[#121510]" />
 
@@ -36,18 +36,33 @@ const LatestUpdates = () => {
 					viewport={{ once: true }}
 					transition={{ duration: 0.8, delay: 0.2 }}
 				>
-					{[1, 2, 3].map((index) => (
-						<motion.div
-							key={index}
-							className="w-full flex justify-center"
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.8, delay: 0.1 * index }}
-						>
-							<InstagramEmbed />
-						</motion.div>
-					))}
+					<motion.div
+						className="w-full flex justify-center"
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.8, delay: 0.1 * 1 }}
+					>
+						<InstagramEmbed url="https://www.instagram.com/p/Cx4hQk1Pdhm/" />
+					</motion.div>
+					<motion.div
+						className="w-full flex justify-center"
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.8, delay: 0.1 * 2 }}
+					>
+						<InstagramEmbed url="https://www.instagram.com/p/DDjPDV7PsvW/?img_index=1" />
+					</motion.div>
+					<motion.div
+						className="w-full flex justify-center"
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.8, delay: 0.1 * 3 }}
+					>
+						<InstagramEmbed url="https://www.instagram.com/p/DEB2G-Lvck2/?img_index=1" />
+					</motion.div>
 				</motion.div>
 
 				{/* Follow Button */}

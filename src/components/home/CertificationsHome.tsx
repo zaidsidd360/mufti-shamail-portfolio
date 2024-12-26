@@ -1,55 +1,87 @@
 import { motion } from "framer-motion";
-import {
-	Award,
-	BookOpen,
-	GraduationCap,
-	Scroll,
-	ArrowRight,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const certificates = [
-	{
-		title: "Hadith",
-		count: "15+",
-		description:
-			"Ijazahs in various books of Hadith including Sahih Bukhari and Muslim",
-		icon: BookOpen,
-	},
-	{
-		title: "Fiqh",
-		count: "10+",
-		description:
-			"Certifications in Islamic jurisprudence from renowned scholars",
-		icon: Scroll,
-	},
-	{
-		title: "Islamic Studies",
-		count: "20+",
-		description:
-			"Comprehensive certifications in various Islamic disciplines",
-		icon: GraduationCap,
-	},
-	{
-		title: "Special Ijazahs",
-		count: "5+",
-		description: "Unique authorizations in specialized Islamic texts",
-		icon: Award,
-	},
-];
+// const certificates = [
+// 	{
+// 		title: "Hadith",
+// 		count: "15+",
+// 		description:
+// 			"Ijazahs in various books of Hadith including Sahih Bukhari and Muslim",
+// 		icon: BookOpen,
+// 	},
+// 	{
+// 		title: "Fiqh",
+// 		count: "10+",
+// 		description:
+// 			"Certifications in Islamic jurisprudence from renowned scholars",
+// 		icon: Scroll,
+// 	},
+// 	{
+// 		title: "Islamic Studies",
+// 		count: "20+",
+// 		description:
+// 			"Comprehensive certifications in various Islamic disciplines",
+// 		icon: GraduationCap,
+// 	},
+// 	{
+// 		title: "Special Ijazahs",
+// 		count: "5+",
+// 		description: "Unique authorizations in specialized Islamic texts",
+// 		icon: Award,
+// 	},
+// ];
 
 const CertificationsHome = () => {
 	return (
-		<section className="relative py-24 bg-[#121510]">
+		<section className="relative py-16 md:py-24 bg-[#121510]">
 			{/* Background Gradient */}
 			<div className="absolute inset-0 bg-gradient-to-b from-[#1a1f17] to-[#191a13]" />
 
 			<div className="relative z-10 max-w-7xl mx-auto px-6">
-				<h2 className="text-4xl md:text-7xl font-bold text-[#c3e5a5] text-center mb-16">
-					Certifications & Ijazahs
-				</h2>
+				<motion.h1
+					className="text-4xl md:text-7xl font-bold text-[#c3e5a5] md:text-center md:mb-16 w-full mb-8 z-20"
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.8 }}
+				>
+					Certifications and Ijazahs
+				</motion.h1>
 
 				<motion.div
+					initial={{ opacity: 0, x: -20 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.8 }}
+				>
+					<p className="text-md md:text-lg text-gray-400 md:text-center ">
+						Mufti Shamail Nadwi is a distinguished Islamic scholar
+						whose academic journey is marked by a series of esteemed
+						certifications and Ijazahs (authorizations to teach)
+						that reflect his deep commitment to Islamic education.
+						Having completed his advanced studies in Islamic
+						jurisprudence (Fiqh) and principles of Islamic law (Usul
+						al-Fiqh) at some of the most respected seminaries, Mufti
+						Shamail earned his Ifta certification, authorizing him
+						to issue legal verdicts (fatwas) on matters of Islamic
+						law. He is also recognized for his mastery of Quranic
+						sciences, Hadith studies, and Arabic linguistics,
+						supported by multiple Ijazahs granted by prominent
+						scholars of his time. These authorizations connect him
+						to a rich tradition of scholarly transmission, tracing
+						back to the Prophet Muhammad (peace be upon him). His
+						Ijazahs in Hadith, particularly in canonical collections
+						such as Sahih Bukhari and Sahih Muslim, further
+						establish his authority in interpreting Islamic texts.
+						Mufti Shamail's academic rigor, combined with his
+						humility and dedication to serving the community, makes
+						him a respected figure in Islamic scholarship,
+						continuing the legacy of authentic knowledge
+						dissemination.
+					</p>
+				</motion.div>
+				{/* <motion.div
 					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +107,7 @@ const CertificationsHome = () => {
 							<p className="text-gray-400">{cert.description}</p>
 						</motion.div>
 					))}
-				</motion.div>
+				</motion.div> */}
 
 				<motion.div
 					className="mt-16 text-center"
