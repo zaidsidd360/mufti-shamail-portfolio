@@ -107,7 +107,7 @@ const LatestBook: React.FC<LatestBookProps> = ({
 						className="group flex items-center gap-2 px-8 py-4 bg-[#c3e5a5] 
               text-gray-600 rounded-full font-medium text-lg 
               transition-all duration-300 hover:shadow-lg
-              hover:bg-[#a1c780] transform hover:-translate-y-0.5"
+              hover:bg-[#a1c780] transform hover:-translate-y-0.5 "
 						whileHover={{ scale: 1.02 }}
 						whileTap={{ scale: 0.98 }}
 					>

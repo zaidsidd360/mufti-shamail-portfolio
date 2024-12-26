@@ -56,29 +56,12 @@ const CertificationsHome = () => {
 					transition={{ duration: 0.8 }}
 				>
 					<p className="text-md md:text-lg text-gray-400 md:text-center ">
-						Mufti Shamail Nadwi is a distinguished Islamic scholar
-						whose academic journey is marked by a series of esteemed
-						certifications and Ijazahs (authorizations to teach)
-						that reflect his deep commitment to Islamic education.
-						Having completed his advanced studies in Islamic
-						jurisprudence (Fiqh) and principles of Islamic law (Usul
-						al-Fiqh) at some of the most respected seminaries, Mufti
-						Shamail earned his Ifta certification, authorizing him
-						to issue legal verdicts (fatwas) on matters of Islamic
-						law. He is also recognized for his mastery of Quranic
-						sciences, Hadith studies, and Arabic linguistics,
-						supported by multiple Ijazahs granted by prominent
-						scholars of his time. These authorizations connect him
-						to a rich tradition of scholarly transmission, tracing
-						back to the Prophet Muhammad (peace be upon him). His
-						Ijazahs in Hadith, particularly in canonical collections
-						such as Sahih Bukhari and Sahih Muslim, further
-						establish his authority in interpreting Islamic texts.
-						Mufti Shamail's academic rigor, combined with his
-						humility and dedication to serving the community, makes
-						him a respected figure in Islamic scholarship,
-						continuing the legacy of authentic knowledge
-						dissemination.
+						Explore some of the certifications and achievements of
+						Mufti Shamail Nadwi. He completed Alimiyat (Graduation)
+						in Islamic Studies in 2017, Fazeelat (Post-Graduation)
+						in Tafseer Al-Quran in 2019, and Tadreeb Alal Ifta
+						(Mufti) in 2020 from the renowned Islamic university,
+						Darul Uloom Nadwatul Ulama, India.
 					</p>
 				</motion.div>
 				{/* <motion.div
@@ -116,7 +99,7 @@ const CertificationsHome = () => {
 					viewport={{ once: true }}
 					transition={{ delay: 0.4 }}
 				>
-					<Link to="/certificates">
+					<Link to="/certifications">
 						<motion.button
 							className="group flex items-center gap-2 mx-auto px-8 py-4 bg-[#c3e5a5] text-gray-800 rounded-lg font-medium text-lg transition-all duration-300 hover:bg-[#a1c780]"
 							whileHover={{ scale: 1.02 }}

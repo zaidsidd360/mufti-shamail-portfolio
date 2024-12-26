@@ -32,7 +32,7 @@ const Navbar = () => {
 	const menuItems = [
 		{ label: "Home", href: "/" },
 		{ label: "Books", href: "/books" },
-		{ label: "Fatwah", href: "/fatwah" },
+		{ label: "Certifications", href: "/certifications" },
 	];
 
 	const letterAnimation = {
@@ -50,7 +50,7 @@ const Navbar = () => {
 
 	return (
 		<motion.nav
-			className="fixed top-0 left-0 w-full z-[9999]"
+			className="fixed top-0 left-0 w-full z-[999]"
 			initial={{ backgroundColor: "rgba(21, 22, 21, 0)" }}
 			animate={{
 				backgroundColor: hasScrolled
