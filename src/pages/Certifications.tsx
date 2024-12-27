@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { certificateImages, ijazahImages } from "../helper";
 import ImageCarousel from "../components/certifications/ImageCarousel";
 import ImageModal from "../components/certifications/ImageModal";
@@ -13,6 +13,19 @@ const Certifications = () => {
 	const [selectedCategory, setSelectedCategory] = useState<
 		"certificates" | "ijazahs" | ""
 	>("");
+
+	useEffect(() => {
+		if (selectedImage) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "";
+		}
+
+		// Cleanup to reset the overflow when the component unmounts
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [selectedImage]);
 
 	return (
 		<main className="min-h-screen bg-[#121510]">

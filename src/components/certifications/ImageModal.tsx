@@ -34,14 +34,14 @@ const ImageModal = ({
 			className="fixed inset-0 z-[1000] h-full bg-black/90 flex flex-col items-center justify-center p-4"
 			onClick={onClose}
 		>
-			<div className="relative max-w-4xl w-full aspect-[4/3] mb-8">
+			<div className="relative max-w-4xl w-full aspect-[4/3] mb-4 md:mb-8 h-[70vh]">
 				<img
 					src={selectedImage}
 					alt="Certificate Preview"
 					className="w-full h-full object-contain"
 				/>
 			</div>
-			<div className="flex gap-8 items-center">
+			<div className="flex gap-8 items-center justify-between md:justify-center w-full bg-[#22271e] w-full md:max-w-max rounded-full p-2">
 				<button
 					onClick={(e) => {
 						e.stopPropagation();
@@ -61,6 +61,9 @@ const ImageModal = ({
 				>
 					<ChevronLeft className="w-6 h-6 text-[#121510]" />
 				</button>
+				<span className="text-[#696968]">
+					{currentIndex + 1}/{images.length}
+				</span>
 				<button
 					onClick={(e) => {
 						e.stopPropagation();

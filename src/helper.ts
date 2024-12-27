@@ -34,12 +34,6 @@ export const certificateImages = [
 		category: "certificate",
 	},
 	{
-		image: arabicSpeech,
-		title: "",
-		description: "",
-		category: "certificate",
-	},
-	{
 		image: fazeelat,
 		title: "",
 		description: "",
@@ -59,6 +53,12 @@ export const certificateImages = [
 	},
 	{
 		image: tafseer,
+		title: "",
+		description: "",
+		category: "certificate",
+	},
+	{
+		image: arabicSpeech,
 		title: "",
 		description: "",
 		category: "certificate",
